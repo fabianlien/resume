@@ -1,0 +1,16 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Spartan:wght@400;600&display=swap');
+
+/* Header */
+header {
+    margin: 0;
+}
+
+.logo {
+    background: url("../images/profile.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
