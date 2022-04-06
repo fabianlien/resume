@@ -22,19 +22,19 @@ section {
     height: 240px;
 }
 
-.a-home-color {
+.home-color {
     background-color: rgb(216, 129, 48)
 }
 
-.a-resume-color {
+.resume-color {
     background-color: rgb(75, 185, 167)
 }
 
-.a-contact-color {
+.contact-color {
     background-color: rgb(122, 82, 122)
 }
 
-.a-download-color {
+.download-color {
     background-color: rgb(175, 175, 175);
 }
 
@@ -245,6 +245,32 @@ section h3 {
     margin-top: -8px;
 }
 
+/* Contact Section */
+
+.contact-color h3 {
+    margin-top: 90px;
+    margin-bottom: 10px;
+}
+
+.contact-color h5 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.center-form {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(51, 51, 51);
+    border: none;
+}
+
 /* Footer */
 
 footer {
@@ -301,4 +327,16 @@ footer li i {
 
 footer li i:hover {
     color: rgb(216, 129, 48);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+    .center-form {
+        padding-top: 10px;
+        padding-bottom: 100px;
+        margin: 0 auto;
+        width: 66%;
+        max-width: 900px;
+    }
 }
