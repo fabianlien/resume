@@ -140,8 +140,8 @@ header {
 section h3 {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .row-table {
@@ -160,6 +160,7 @@ section h3 {
     clear: both;
     width: 100%;
     font-size: large;
+    font-family: 'Spartan', sans-serif;
 }
 
 .personal-info-item .key,
@@ -199,6 +200,49 @@ section h3 {
     margin-left: 10px;
     font-size: large;
     font-family: 'Raleway', sans-serif;
+}
+
+.timeline-item {
+    margin-top: -1em;
+    padding-left: 1.5em;
+    padding-top: 60px;
+    position: relative;
+    border-left: 2px solid rgb(51, 51, 51);
+    font-family: 'Spartan', sans-serif;
+}
+
+.timeline-item:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 2em;
+    top: 3em;
+    display: block;
+    font-size: small;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.5em;
+    left: -7px;
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    background: rgb(51, 51, 51);
+}
+
+.timeline-item h4 {
+    font-weight: 300;
+    font-size: large;
+}
+
+.timeline-item p {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin-top: -8px;
 }
 
 /* Footer */
