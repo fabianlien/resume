@@ -339,4 +339,12 @@ footer li i:hover {
         width: 66%;
         max-width: 900px;
     }
+
+    .section-column {
+        min-height: 66vh;
+    }
+
+    .row h3 {
+        margin-top: 10vh;
+    }
 }
