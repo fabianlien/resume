@@ -20,6 +20,23 @@ function initMap() {
 }
 
 //** GitHub */
+
+//* Displays user information from parameter */
+function userInformationHTML(user) {
+    return `<h2>${user.name}
+                <span class="small-name">(@<a href="${user.html_url}" target="_blank">${user.login}</a>)</span>
+            </h2>
+            <div class="gh-content">
+                <div class="gh-avatar">
+                    <a href="${user.html_url}" target="_blank">
+                        <img src="${user.avatar_url}" width="64" height="64" alt="${user.login}"
+                    </a>
+                </div>
+                <p>Followers: ${user.followers} - Following: ${user.following}<br>Repos: ${user.public_repos}</p>
+            </div>`
+}
+
+//** Takes promise from API and either passes response to userInformation function, or throws error. */
 function fetchGitHubInformation(e) {
     let username = $("#gh-username").val();
     if (!username) {
@@ -27,4 +44,18 @@ function fetchGitHubInformation(e) {
         return;
     }
     $("#gh-user-data").html(`<div id="loader"><img src="assets/images/loader.gif" alt="loading..."/></div>`);
+
+    $.when(
+        $.getJSON(`https://api.github.com/users/${username}`)
+    ).then(
+        function(response) {
+            $("#gh-user-data").html(userInformationHTML(response));
+        }, function(errorResponse) {
+            if (errorResponse.status ===  404) {
+                $("#gh-user-data").html(`${username} was not found...`)
+            } else {
+                console.log(errorResponse);
+                $("#gh-user-data").html(`<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
+            }
+        });
 }
