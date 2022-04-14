@@ -3,6 +3,10 @@
 
 /* Colors & Effects */
 
+a {
+    text-decoration: none;
+}
+
 header {
     background-color: rgb(133, 132, 125);
 }
@@ -286,6 +290,12 @@ div #map {
 #loader img {
     height: 64px;
 }
+
+.small-name {
+    font-size: 0.75em;
+    color: #a9a9a9;
+    font-style: italic;
+  }
 
 /* Footer */
 

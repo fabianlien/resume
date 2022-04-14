@@ -36,6 +36,27 @@ function userInformationHTML(user) {
             </div>`
 }
 
+//* Displays repository information passed as a second parameter from fetchGitHubInformation() */
+function repoInformationHTML(repos) {
+    if (repos.length === 0) {
+        return `<div class="clearfix repo-list">No repos to show!</div>`
+    }
+    listItemsHTML = repos.map(function (repo) {
+        return `<li>
+            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+        </li>`
+    });
+
+    return `<div class="clearfix repo-list>
+        <p>
+            <strong>Repo List:</strong>
+        </p>
+        <ul>
+            ${listItemsHTML.join("\n")}
+        </ul>
+    </div>`
+}
+
 //** Takes promise from API and either passes response to userInformation function, or throws error. */
 function fetchGitHubInformation(e) {
     let username = $("#gh-username").val();
@@ -46,12 +67,15 @@ function fetchGitHubInformation(e) {
     $("#gh-user-data").html(`<div id="loader"><img src="assets/images/loader.gif" alt="loading..."/></div>`);
 
     $.when(
-        $.getJSON(`https://api.github.com/users/${username}`)
+        $.getJSON(`https://api.github.com/users/${username}`),
+        $.getJSON(`https://api.github.com/users/${username}/repos`)
     ).then(
-        function(response) {
-            $("#gh-user-data").html(userInformationHTML(response));
-        }, function(errorResponse) {
-            if (errorResponse.status ===  404) {
+        function (firstResponse, secondResponse) {
+            $("#gh-user-data").html(userInformationHTML(firstResponse[0]));
+            $("#gh-repo-data").html(repoInformationHTML(secondResponse[0]));
+        },
+        function (errorResponse) {
+            if (errorResponse.status === 404) {
                 $("#gh-user-data").html(`${username} was not found...`)
             } else {
                 console.log(errorResponse);
