@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Spartan:wght@300;400;600&display=swap');
 
 /* Colors & Effects */
- 
+
 header {
     background-color: rgb(133, 132, 125);
 }
 
 footer {
-    color:rgb(240, 250, 250);
+    color: rgb(240, 250, 250);
     background-color: rgb(51, 51, 51);
 }
 
@@ -32,6 +32,10 @@ section {
 
 .contact-color {
     background-color: rgb(122, 82, 122)
+}
+
+.github-color {
+    background-color: rgb(52, 89, 190);
 }
 
 .download-color {
@@ -65,7 +69,7 @@ header {
 
 .heading {
     padding-top: 120px;
-    
+
 }
 
 .logo {
@@ -101,7 +105,7 @@ header {
     margin: 0;
 }
 
-#nav > li {
+#nav>li {
     margin: 0;
     font-size: 16px;
     height: 120px;
@@ -109,20 +113,20 @@ header {
     text-align: center;
 }
 
-#nav > li > a {
+#nav>li>a {
     width: 100%;
     text-decoration: none;
     color: rgb(240, 250, 250);
     height: 120px;
 }
 
-#nav > li > a > i {
+#nav>li>a>i {
     padding-top: 22px;
     display: block;
     font-size: x-large;
 }
 
-#nav > li > a > span {
+#nav>li>a>span {
     display: block;
     width: 100%;
     padding-top: 5px;
@@ -135,7 +139,7 @@ header {
     font-size: 0;
 }
 
-/* Home Section */
+/* Home Page */
 
 section h3 {
     font-family: 'Raleway', sans-serif;
@@ -181,7 +185,7 @@ section h3 {
     width: 65%;
 }
 
-/* Resume Section */
+/* Resume Page */
 .progress {
     position: relative;
     height: 25px;
@@ -245,7 +249,7 @@ section h3 {
     margin-top: -8px;
 }
 
-/* Contact Section */
+/* Contact Page */
 
 .contact-color h3 {
     margin-top: 90px;
@@ -269,6 +273,18 @@ section h3 {
     margin-bottom: 30px;
     background-color: rgb(51, 51, 51);
     border: none;
+}
+
+div #map {
+    min-height: 360px;
+}
+.map {
+    padding: 0;
+}
+
+/* GitHub Page */
+#loader img {
+    height: 64px;
 }
 
 /* Footer */

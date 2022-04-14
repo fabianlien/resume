@@ -18,3 +18,13 @@ function initMap() {
         title: "Home!",
     });
 }
+
+//** GitHub */
+function fetchGitHubInformation(e) {
+    let username = $("#gh-username").val();
+    if (!username) {
+        $("#gh-user-data").html(`<h2>Please enter a existing GitHub username.</h2>`);
+        return;
+    }
+    $("#gh-user-data").html(`<div id="loader"><img src="assets/images/loader.gif" alt="loading..."/></div>`);
+}
