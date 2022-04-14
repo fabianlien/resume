@@ -27,12 +27,14 @@ function userInformationHTML(user) {
                 <span class="small-name">(@<a href="${user.html_url}" target="_blank">${user.login}</a>)</span>
             </h2>
             <div class="gh-content">
-                <div class="gh-avatar">
-                    <a href="${user.html_url}" target="_blank">
-                        <img src="${user.avatar_url}" width="64" height="64" alt="${user.login}"
-                    </a>
+                <div class="row">
+                    <div class="col-3 gh-avatar">
+                        <a href="${user.html_url}" target="_blank">
+                            <img src="${user.avatar_url}" width="64" height="64" alt="${user.login}"
+                        </a>
+                    </div>
+                    <p>Followers: ${user.followers} - Following: ${user.following}<br>Repos: ${user.public_repos}</p>
                 </div>
-                <p>Followers: ${user.followers} - Following: ${user.following}<br>Repos: ${user.public_repos}</p>
             </div>`
 }
 
@@ -47,7 +49,7 @@ function repoInformationHTML(repos) {
         </li>`
     });
 
-    return `<div class="clearfix repo-list>
+    return `<div class="clearfix repo-list">
         <p>
             <strong>Repo List:</strong>
         </p>
@@ -59,6 +61,9 @@ function repoInformationHTML(repos) {
 
 //** Takes promise from API and either passes response to userInformation function, or throws error. */
 function fetchGitHubInformation(e) {
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
+
     let username = $("#gh-username").val();
     if (!username) {
         $("#gh-user-data").html(`<h2>Please enter a existing GitHub username.</h2>`);
@@ -77,9 +82,14 @@ function fetchGitHubInformation(e) {
         function (errorResponse) {
             if (errorResponse.status === 404) {
                 $("#gh-user-data").html(`${username} was not found...`)
+            } else if (errorResponse.status === 403) {
+                let resetTime = new Date(errorResponse.getResponseHeader("X-RateLimit-Reset") * 1000);
+                $("#gh-user-data").html(`<h4>You have exceeded githubs maximum requests (60). Rate limiter will reser in: ${resetTime.toLocaleTimeString()}</h4>`)
             } else {
                 console.log(errorResponse);
                 $("#gh-user-data").html(`<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
             }
         });
 }
+
+$(document).ready(fetchGitHubInformation);
