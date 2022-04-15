@@ -92,4 +92,23 @@ function fetchGitHubInformation(e) {
         });
 }
 
-$(document).ready(fetchGitHubInformation);
+function sendMail(contactForm) {
+    emailjs.send("default_service", "template_default", {
+        from_name: 'Fabian Lien',
+        to_name: contactForm.name.value,
+        reply_to: contactForm.emailaddress.value,
+        message: contactForm.projectsummary.value
+    })
+    .then(
+        function(response) {
+            console.log("SUCCESS", response);
+            contactForm.reset()
+            document.getElementById("request-success").innerHTML = "<h5>Your project request has been sent!</h5>";
+            $("#request-success").removeClass("d-none");
+        },
+        function(error) {
+            console.log("FAILER", error);
+        }
+    )
+    return false;
+}

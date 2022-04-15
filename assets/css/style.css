@@ -286,6 +286,10 @@ div #map {
     padding: 0;
 }
 
+#request-success h5 {
+    margin-bottom: 0;
+}
+
 /* GitHub Page */
 #gh-form {
     font-family: 'Spartan', sans-serif;
