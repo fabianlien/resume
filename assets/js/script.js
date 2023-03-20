@@ -92,6 +92,7 @@ function fetchGitHubInformation(e) {
         });
 }
 
+
 function sendMail(contactForm) {
     emailjs.send("default_service", "template_default", {
         from_name: 'Fabian Lien',
