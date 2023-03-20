@@ -260,8 +260,96 @@ section h3 {
     margin-top: -8px;
 }
 
-/* Contact Page */
+#bootstrap-link {
+    font-size: 36px;
+    line-height: 100%;
+    color: rgb(51, 51, 51);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
 
+#bootstrap-link:hover {
+    color: #6f2cf4;
+}
+
+#react-link {
+    font-size: 36px;
+    line-height: 100%;
+    color: rgb(51, 51, 51);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+#react-link:hover {
+    color: #139eca;
+}
+
+#jquery-logo {
+    height: 36px;
+    width: 36px;
+    background: url(../images/jquerylogo.png);
+    background-size: cover;
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(175deg) brightness(54%) contrast(100%);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+#jquery-logo:hover {
+    filter: none;
+}
+
+#django-logo {
+    fill:rgb(51, 51, 51);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+#django-logo:hover {
+    fill: #0C4B33;
+}
+
+#dj-rest-logo {
+    height: 36px;
+    width: 92px;
+    margin-left: -28px;
+    background: url(../images/djangorest.png);
+    background-size: cover;
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(175deg) brightness(54%) contrast(100%);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+#dj-rest-logo:hover {
+    filter: none;
+}
+
+#postgresql-logo {
+    height: 36px;
+    width: 36px;
+    background: url(../images/postgresql.png);
+    background-size: cover;
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(175deg) brightness(54%) contrast(100%);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+#postgresql-logo:hover {
+    filter: none;
+}
+
+/* Contact Page */
 .contact-color h3 {
     margin-top: 90px;
     margin-bottom: 10px;

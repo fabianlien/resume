@@ -103,8 +103,9 @@ function sendMail(contactForm) {
         function(response) {
             console.log("SUCCESS", response);
             contactForm.reset()
-            document.getElementById("request-success").innerHTML = "<h5>Your project request has been sent!</h5>";
+            document.getElementById("request-success").innerHTML = '<h5>Your project request has been sent!</h5><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
             $("#request-success").removeClass("d-none");
+            $(".close").on("click", () => {$("#request-success").addClass("d-none")})
         },
         function(error) {
             console.log("FAILER", error);
