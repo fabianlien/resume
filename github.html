@@ -45,9 +45,9 @@
                                             aria-hidden="true"></i><span>Contact</span></a>
                                 </li>
                                 <li
-                                    class="col-6 col-sm-3 col-md-4 list-inline-item github-color hvr-shutter-out-vertical active">
-                                    <a href="#"><i class="fa-brands fa-github"
-                                            aria-hidden="true"></i><span>Github</span></a>
+                                    class="col-6 col-sm-3 col-md-4 list-inline-item github-color hvr-icon-fade">
+                                    <div><i class="fa-brands fa-github"
+                                            aria-hidden="true"></i><span>Github</span></div>
                                 </li>
                                 <li
                                     class="d-none d-md-inline-block col-md-2 list-inline-item download-color hvr-shutter-out-vertical">
@@ -65,12 +65,12 @@
             <div class="row github-color">
                 <div class="col-12 text-center">
                     <h3>View GitHub Projects</h3>
-                    <h5>(...or search for another user profile)</h5>
-                </div>
-                <div class="center-form" id="gh-form">
-                    <input type="text" id="gh-username" value="fabianlien" oninput="fetchGitHubInformation()">
-                    <div id="gh-user-data"></div>
-                    <div id="gh-repo-data"></div>
+                    <h6>(...or search for another user profile)</h6>
+                    <div class="center-form" id="gh-form">
+                        <input type="text" id="gh-username" value="fabianlien" oninput="fetchGitHubInformation()">
+                        <div id="gh-user-data" class="center-form"></div>
+                        <div id="gh-repo-data"></div>
+                    </div>
                 </div>
             </div>
         </section>

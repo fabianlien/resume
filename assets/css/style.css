@@ -127,20 +127,20 @@ header {
     text-align: center;
 }
 
-#nav>li>a {
+#nav>li>* {
     width: 100%;
     text-decoration: none;
     color: rgb(240, 250, 250);
     height: 120px;
 }
 
-#nav>li>a>i {
+#nav>li>*>i {
     padding-top: 22px;
     display: block;
     font-size: x-large;
 }
 
-#nav>li>a>span {
+#nav>li>*>span {
     display: block;
     width: 100%;
     padding-top: 5px;
@@ -197,6 +197,18 @@ section h3 {
 .personal-info-item .value {
     vertical-align: top;
     width: 65%;
+}
+
+#linkedinanchor * {
+    text-decoration: none;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+#linkedinanchor *:hover {
+    color: rgb(216, 129, 48);
 }
 
 
@@ -403,6 +415,12 @@ div #map {
     font-weight: 600;
 }
 
+#gh-username {
+    width: 250px;
+    border-radius: 8px;
+    border-width: 0px;
+}
+
 #gh-form a {
     text-decoration: none;
     color: black;
@@ -414,7 +432,7 @@ div #map {
 }
 
 #gh-repo-data {
-    margin-top: 45px;
+    margin-top: -50px;
 }
 
 #loader img {
@@ -543,7 +561,15 @@ footer li i:hover {
 
 
 /* Media Queries */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 420px) {
+    .logo {
+        margin-top: 30px;
+        margin-bottom: -70px;
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 767px) {
     .logo {
         margin-top: 40px;
         margin-bottom: -60px;

@@ -84,7 +84,7 @@ function fetchGitHubInformation(e) {
                 $("#gh-user-data").html(`${username} was not found...`)
             } else if (errorResponse.status === 403) {
                 let resetTime = new Date(errorResponse.getResponseHeader("X-RateLimit-Reset") * 1000);
-                $("#gh-user-data").html(`<h4>You have exceeded githubs maximum requests (60). Rate limiter will reser in: ${resetTime.toLocaleTimeString()}</h4>`)
+                $("#gh-user-data").html(`<h4>You have exceeded githubs maximum requests (60). Rate limiter will reset at: ${resetTime.toLocaleTimeString()}</h4>`)
             } else {
                 console.log(errorResponse);
                 $("#gh-user-data").html(`<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
