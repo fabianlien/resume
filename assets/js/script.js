@@ -28,15 +28,28 @@ function userInformationHTML(user) {
             </h2>
             <div class="gh-content">
                 <div class="row">
-                    <div class="col-3 gh-avatar">
+                    <div class="col-md-3 gh-avatar">
                         <a href="${user.html_url}" target="_blank">
                             <img src="${user.avatar_url}" width="64" height="64" alt="${user.login}"
                         </a>
                     </div>
-                    <p>Followers: ${user.followers} - Following: ${user.following}<br>Repos: ${user.public_repos}</p>
+                    <div class="col">
+                        <a href="${user.html_url}" target="_blank">
+                            <p>Followers: ${user.followers} - Following: ${user.following}<br>Repos: ${user.public_repos}</p>
+                        </a>
+                    </div>
                 </div>
             </div>`
 }
+
+//* Picks a random color from array to style repo list items */
+function colorRandomizer() {
+    let colors = ["#C6DFCD", "#F5F2D3", "#E6D5C3", "#C9A8A0", "#737D89", "#869F9F", "#B6CED9", "#7B86B3", "#E39898", "#F0AF9E", "#F7D3BE", "#CC7A3B", "#C49B3B", "#5A778A", "#8CB2BB", "#C5C5B9", "#778874"]
+    let randomColor = colors[Math.floor(Math.random()*colors.length)]
+    return randomColor
+}
+
+
 
 //* Displays repository information passed as a second parameter from fetchGitHubInformation() */
 function repoInformationHTML(repos) {
@@ -45,13 +58,13 @@ function repoInformationHTML(repos) {
     }
     listItemsHTML = repos.map(function (repo) {
         return `<li>
-            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            <a style="background-color:${colorRandomizer()}"href="${repo.html_url}" target="_blank">${repo.name}</a>
         </li>`
     });
 
     return `<div class="clearfix repo-list">
         <p>
-            <strong>Repo List:</strong>
+            <strong id="repo-heading">Repo List:</strong>
         </p>
         <ul>
             ${listItemsHTML.join("\n")}
@@ -92,7 +105,7 @@ function fetchGitHubInformation(e) {
         });
 }
 
-
+//* Post contact form data to emailJS api*/
 function sendMail(contactForm) {
     emailjs.send("default_service", "template_default", {
         from_name: 'Fabian Lien',
