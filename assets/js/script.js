@@ -28,13 +28,13 @@ function userInformationHTML(user) {
             </h2>
             <div class="gh-content">
                 <div class="row">
-                    <div class="col-md-3 gh-avatar">
+                    <div class="col-md-3 gh-avatar hvr-grow">
                         <a href="${user.html_url}" target="_blank">
                             <img src="${user.avatar_url}" width="64" height="64" alt="${user.login}"
                         </a>
                     </div>
                     <div class="col">
-                        <a href="${user.html_url}" target="_blank">
+                        <a href="${user.html_url}/?tab=repositories" target="_blank">
                             <p>Followers: ${user.followers} - Following: ${user.following}<br>Repos: ${user.public_repos}</p>
                         </a>
                     </div>
@@ -44,7 +44,7 @@ function userInformationHTML(user) {
 
 //* Picks a random color from array to style repo list items */
 function colorRandomizer() {
-    let colors = ["#C6DFCD", "#F5F2D3", "#E6D5C3", "#C9A8A0", "#737D89", "#869F9F", "#B6CED9", "#7B86B3", "#E39898", "#F0AF9E", "#F7D3BE", "#CC7A3B", "#C49B3B", "#5A778A", "#8CB2BB", "#C5C5B9", "#778874"]
+    let colors = ["#C6DFCD", "#F5F2D3", "#E6D5C3", "#C9A8A0", "#737D89", "#869F9F", "#B6CED9", "#7B86B3", "#E39898", "#F0AF9E", "#F7D3BE", "#CC7A3B", "#C49B3B", "#5A778A", "#8CB2BB", "#C5C5B9", "#778874", "#80D5DC", "#6AC1DE", "#5A9DD7", "#6F6283", "#7CBB90"]
     let randomColor = colors[Math.floor(Math.random()*colors.length)]
     return randomColor
 }
@@ -57,7 +57,7 @@ function repoInformationHTML(repos) {
         return `<div class="clearfix repo-list">No repos to show!</div>`
     }
     listItemsHTML = repos.map(function (repo) {
-        return `<li>
+        return `<li class="hvr-float">
             <a style="background-color:${colorRandomizer()}"href="${repo.html_url}" target="_blank">${repo.name}</a>
         </li>`
     });

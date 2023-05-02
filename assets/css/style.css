@@ -443,6 +443,7 @@ div #map {
 }
 
 #loader img {
+    margin: 40px auto;
     height: 64px;
 }
 
@@ -450,6 +451,17 @@ div #map {
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.gh-avatar img:hover {
+    box-shadow: none;
+    height: 76px;
+    width: 76px;
+    border: 3px solid rgb(216, 129, 48);
 }
 
 #repo-heading {
@@ -463,13 +475,13 @@ div #map {
   }
 
   .repo-list {
-    display: block;
-    clear: both;
-    width: 100%;
+    margin-left: -10%;
+    width: 120%;
   }
   
   .repo-list ul {
     font-size: 1.2em;
+    padding-inline-start: 0;
   }
   
   .repo-list ul li {
@@ -558,7 +570,7 @@ footer li i {
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
 }
-
+loader
 footer li i:hover {
     color: rgb(216, 129, 48);
 }
@@ -575,6 +587,10 @@ footer li i:hover {
     #nav .active {
         border-bottom: solid 16px rgba(0, 0, 0, 0.2);
     }
+
+    #loader img {
+        margin: 100px auto;
+    }
 }
 
 @media screen and (min-width: 421px) and (max-width: 767px) {
@@ -587,6 +603,14 @@ footer li i:hover {
     #nav .active {
         border-bottom: solid 16px rgba(0, 0, 0, 0.2);
     }
+
+    #loader img {
+        margin: 80px auto;
+    }
+
+    .repo-list ul {
+        padding-inline-start: 20px;
+      }
 }
 
 @media screen and (min-width: 768px) {
@@ -614,4 +638,13 @@ footer li i:hover {
         margin-top: unset;
         margin-bottom: unset;
     }
+
+    .repo-list ul {
+        padding-inline-start: 40px;
+      }
+
+    .repo-list {
+        margin-left: -15%;
+        width: 130%;
+  }
 }
