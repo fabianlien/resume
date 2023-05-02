@@ -591,6 +591,14 @@ footer li i:hover {
     #loader img {
         margin: 100px auto;
     }
+
+    .repo-list .hvr-float a {
+        font-size: 80%;
+    }
+
+    .repo-list {
+        margin-left: -6%;
+    }
 }
 
 @media screen and (min-width: 421px) and (max-width: 767px) {
