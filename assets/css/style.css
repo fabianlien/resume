@@ -356,11 +356,17 @@ section h3 {
     max-width: fit-content;
     padding: 10px;
     margin: 10px auto;
+    margin-left: min(10px);
     font-family: 'Raleway', sans-serif;
     color: rgb(75, 185, 167);
     border: solid 2px rgb(75, 185, 167);
     border-radius: 30px;
     background-color: rgb(37, 87, 78);
+}
+
+.row .spoken-language {
+    color: rgb(190, 184, 176);
+    background-color: rgb(62, 88, 84);
 }
 
 #diploma-iframe {
