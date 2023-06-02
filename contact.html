@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabian Lien</title>
     <!-- Bootstrap, Font Awesome, Jquery and CSS links -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/171d053c1a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
         integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg=="
@@ -38,43 +39,51 @@
                     <div class="row no-gutters">
                         <div class="col">
                             <ul id="nav" class="list-inline menucontainer">
-                                <li class="col-6 col-sm-3 d-md-none list-inline-item home-color hvr-shutter-out-vertical">
+                                <li
+                                    class="col-6 col-sm-3 d-md-none list-inline-item home-color hvr-shutter-out-vertical">
                                     <a href="index.html#nav"><i class="fa-solid fa-house-user"
                                             aria-hidden="true"></i><span>Home</span></a>
                                 </li>
-                                <li class="col-6 col-sm-3 d-md-none list-inline-item resume-color hvr-shutter-out-vertical">
+                                <li
+                                    class="col-6 col-sm-3 d-md-none list-inline-item resume-color hvr-shutter-out-vertical">
                                     <a href="resume.html#nav"><i class="fa-solid fa-graduation-cap"
                                             aria-hidden="true"></i><span>Resume</span></a>
                                 </li>
-                                <li class="col-6 col-sm-3 d-md-none list-inline-item contact-color hvr-icon-fade active">
-                                    <div><i class="fa-solid fa-address-book"
-                                            aria-hidden="true"></i><span>Contact</span></div>
+                                <li
+                                    class="col-6 col-sm-3 d-md-none list-inline-item contact-color hvr-icon-fade active">
+                                    <div><i class="fa-solid fa-address-book" aria-hidden="true"></i><span>Contact</span>
+                                    </div>
                                 </li>
-                                <li class="col-6 col-sm-3 d-md-none list-inline-item github-color hvr-shutter-out-vertical">
+                                <li
+                                    class="col-6 col-sm-3 d-md-none list-inline-item github-color hvr-shutter-out-vertical">
                                     <a href="github.html#nav"><i class="fa-brands fa-github"
                                             aria-hidden="true"></i><span>Github</span></a>
                                 </li>
 
-                                <li class="d-none d-md-inline-block col-md-2 list-inline-item home-color hvr-shutter-out-vertical">
+                                <li
+                                    class="d-none d-md-inline-block col-md-2 list-inline-item home-color hvr-shutter-out-vertical">
                                     <a href="index.html"><i class="fa-solid fa-house-user"
                                             aria-hidden="true"></i><span>Home</span></a>
                                 </li>
-                                <li class="d-none d-md-inline-block col-md-2 list-inline-item resume-color hvr-shutter-out-vertical">
+                                <li
+                                    class="d-none d-md-inline-block col-md-2 list-inline-item resume-color hvr-shutter-out-vertical">
                                     <a href="resume.html"><i class="fa-solid fa-graduation-cap"
                                             aria-hidden="true"></i><span>Resume</span></a>
                                 </li>
-                                <li class="d-none d-md-inline-block col-md-4 list-inline-item contact-color hvr-icon-fade active">
-                                    <div><i class="fa-solid fa-address-book"
-                                            aria-hidden="true"></i><span>Contact</span></div>
+                                <li
+                                    class="d-none d-md-inline-block col-md-4 list-inline-item contact-color hvr-icon-fade active">
+                                    <div><i class="fa-solid fa-address-book" aria-hidden="true"></i><span>Contact</span>
+                                    </div>
                                 </li>
-                                <li class="d-none d-md-inline-block col-md-2 list-inline-item github-color hvr-shutter-out-vertical">
+                                <li
+                                    class="d-none d-md-inline-block col-md-2 list-inline-item github-color hvr-shutter-out-vertical">
                                     <a href="github.html"><i class="fa-brands fa-github"
                                             aria-hidden="true"></i><span>Github</span></a>
                                 </li>
                                 <li
                                     class="d-none d-md-inline-block col-md-2 list-inline-item download-color hvr-shutter-out-vertical">
                                     <a href="assets/cv/resume.pdf" target="_blank"><i
-                                        class="fa-solid fa-file-arrow-down"
+                                            class="fa-solid fa-file-arrow-down"
                                             aria-hidden="true"></i><span>Down<br>Load</span></a>
                                 </li>
                             </ul>
@@ -83,24 +92,115 @@
                 </div>
             </div>
         </header>
-        <section class="container-fluid main-content-box-color">
-            <div class="row contact-color">
-                <div class="col section-column">
-                    <h3 class="text-center">Got a project in mind?</h3>
-                    <h5 class="text-center">Let's work together!</h5>
-                    <div class="center-form">
-                        <div class="alert alert-secondary alert-dismissible fade show text-center d-none" role="alert" id="request-success"></div>
-                        <form onsubmit="return sendMail(this);">
-                            <input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required />
-                            <input type="email" name="emailaddress" class="form-control mb-2" id="emailaddress"
-                                placeholder="Email" required />
-                            <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary"
-                                placeholder="Project Description" required></textarea>
-                            <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
-                        </form>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="d-none d-md-block col-md-4 section-column personal-info-color contact-column">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Contact info</h3>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Phone:</p>
+                            </div>
+                            <div class="value">
+                                <p>+46 73 094 23 23</p>
+                            </div>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Email:</p>
+                            </div>
+                            <div class="value">
+                                <p>fabian.lien@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Linked In:</p>
+                            </div>
+                            <div class="value" id="linkedinanchor">
+                                <a href="https://www.linkedin.com/in/fabian-lien/" target="_blank"
+                                    rel="noopener">linkedin.com/in/fabian-lien</a>
+                            </div>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Address:</p>
+                            </div>
+                            <div class="value">
+                                <p>Spångavägen 46<br>168 75 Stockholm<br>SWEDEN</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-8 section-column main-content-box-color contact-color contact-column">
+                    <div class="col">
+                        <h3 class="text-center">Got a project in mind?</h3>
+                        <h5 class="text-center">Let's work together!</h5>
+                        <div class="center-form">
+                            <div class="alert alert-secondary alert-dismissible fade show text-center d-none"
+                                role="alert" id="request-success"></div>
+                            <form onsubmit="return sendMail(this);">
+                                <input type="text" name="name" class="form-control mb-2" id="fullname"
+                                    placeholder="Name" required />
+                                <input type="email" name="emailaddress" class="form-control mb-2" id="emailaddress"
+                                    placeholder="Email" required />
+                                <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary"
+                                    placeholder="Project Description" required></textarea>
+                                <button type="submit" class="btn btn-secondary center-block">Send Project
+                                    Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-block d-md-none col-md-4 section-column personal-info-color contact-column">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Contact info</h3>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Phone:</p>
+                            </div>
+                            <div class="value">
+                                <p>+46 73 094 23 23</p>
+                            </div>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Email:</p>
+                            </div>
+                            <div class="value">
+                                <p>fabian.lien@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Linked In:</p>
+                            </div>
+                            <div class="value" id="linkedinanchor">
+                                <a href="https://www.linkedin.com/in/fabian-lien/" target="_blank"
+                                    rel="noopener">linkedin.com/in/fabian-lien</a>
+                            </div>
+                        </div>
+                        <div class="personal-info-item contact-info">
+                            <div class="key">
+                                <p>Address:</p>
+                            </div>
+                            <div class="value">
+                                <p>Spångavägen 46<br>168 75 Stockholm<br>SWEDEN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
             </div>
+        </section>
+        <section class="container-fluid main-content-box-color">
+
         </section>
         <section class="container-fluid">
             <div class="row">
@@ -131,26 +231,26 @@
                 <div class="col-sm-4">
                     <h5>Social</h5>
                     <p class="inline-block">
-                        <ul class="list-inline social-links">
-                            <li class="list-inline-item">
-                                <a href="https://www.facebook.com/fabian.lien/" target="_blank"  rel=”noopener”> 
-                                    <i class="fa-brands fa-facebook-square" aria-hidden="true"></i>
-                                    <span class="sr-only">Facebook</span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/in/fabian-lien/" target="_blank"  rel=”noopener”> 
-                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                                    <span class="sr-only">LinkedIn</span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.instagram.com/fabianlien/" target="_blank"  rel=”noopener”> 
-                                    <i class="fa-brands fa-instagram-square" aria-hidden="true"></i>
-                                    <span class="sr-only">Instagram</span>
-                                </a>
-                            </li>
-                        </ul>
+                    <ul class="list-inline social-links">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/fabian.lien/" target="_blank" rel=”noopener”>
+                                <i class="fa-brands fa-facebook-square" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/fabian-lien/" target="_blank" rel=”noopener”>
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/fabianlien/" target="_blank" rel=”noopener”>
+                                <i class="fa-brands fa-instagram-square" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
                     </p>
                 </div>
             </div>

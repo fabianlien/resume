@@ -3,10 +3,10 @@ const API_KEY = "AIzaSyDGvBETzItQ1g8J1iPdIsmAi7coHG7_frM"
 //** Renders map via google maps js API and adds home marker*/
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
+        zoom: 11,
         center: {
-            lat: 59.334591,
-            lng: 18.063240,
+            lat: 59.333333,
+            lng: 18.012345,
         }
     });
     new google.maps.Marker({
@@ -18,8 +18,6 @@ function initMap() {
         title: "Home!",
     });
 }
-
-//** GitHub */
 
 //* Displays user information from parameter */
 function userInformationHTML(user) {
@@ -49,8 +47,6 @@ function colorRandomizer() {
     return randomColor
 }
 
-
-
 //* Displays repository information passed as a second parameter from fetchGitHubInformation() */
 function repoInformationHTML(repos) {
     if (repos.length === 0) {
@@ -58,7 +54,7 @@ function repoInformationHTML(repos) {
     }
     listItemsHTML = repos.map(function (repo) {
         return `<li class="hvr-float">
-            <a style="background-color:${colorRandomizer()}"href="${repo.html_url}" target="_blank">${repo.name}</a>
+            <a style="background-color:${colorRandomizer()}" href="${repo.html_url}" target="_blank">${repo.name}</a>
         </li>`
     });
 

@@ -173,7 +173,7 @@ section h3 {
 }
 
 .personal-info-item {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: block;
     clear: both;
     width: 100%;
@@ -190,13 +190,27 @@ section h3 {
 }
 
 .personal-info-item .key {
+    width: 48%;
+    text-transform: uppercase;
+}
+
+div .contact-info .key {
     width: 30%;
     text-transform: uppercase;
 }
 
 .personal-info-item .value {
     vertical-align: top;
-    width: 65%;
+    width: 47%;
+}
+
+.personal-info-item .value ul {
+    margin-left: -90px;
+    color: #a9a9a9;
+}
+
+div .contact-info .value {
+    width: 60%;
 }
 
 #linkedinanchor * {
@@ -256,6 +270,17 @@ section h3 {
     margin-top: -8px;
 }
 
+.collapse-header {
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.collapse-header:hover {
+    color: rgb(216, 129, 48)
+}
+
 .icon-box {
     margin-bottom: 30px;
 }
@@ -305,7 +330,7 @@ section h3 {
 }
 
 #django-logo {
-    fill:rgb(51, 51, 51);
+    fill: rgb(51, 51, 51);
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
@@ -404,8 +429,9 @@ section h3 {
 }
 
 div #map {
-    min-height: 360px;
+    min-height: 400px;
 }
+
 .map {
     padding: 0;
 }
@@ -433,7 +459,7 @@ div #map {
 }
 
 #gh-user-data h2 {
-    margin-top:45px;
+    margin-top: 45px;
     margin-bottom: 10px;
 }
 
@@ -478,23 +504,23 @@ div #map {
 .small-name {
     font-size: 0.75em;
     color: #a9a9a9;
-  }
+}
 
-  .repo-list {
+.repo-list {
     margin-left: -10%;
     width: 120%;
-  }
-  
-  .repo-list ul {
+}
+
+.repo-list ul {
     font-size: 1.2em;
     padding-inline-start: 0;
-  }
-  
-  .repo-list ul li {
+}
+
+.repo-list ul li {
     display: block;
-  }
-  
-  .repo-list ul li a {
+}
+
+.repo-list ul li a {
     font-weight: bold;
     padding: 6px 9px;
     display: block;
@@ -511,17 +537,17 @@ div #map {
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
-  }
+}
 
-  .repo-list ul li a:hover {
+.repo-list ul li a:hover {
     background-color: #396895;
-  }
-  
-  .repo-list ul li a:active {
+}
+
+.repo-list ul li a:active {
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  }
+}
 
 
 /* Footer */
@@ -576,8 +602,8 @@ footer li i {
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
 }
-loader
-footer li i:hover {
+
+loader footer li i:hover {
     color: rgb(216, 129, 48);
 }
 
@@ -588,6 +614,7 @@ footer li i:hover {
         margin-top: 30px;
         margin-bottom: -70px;
         border-radius: 0;
+        height: 400px;
     }
 
     #nav .active {
@@ -612,6 +639,7 @@ footer li i:hover {
         margin-top: 40px;
         margin-bottom: -60px;
         border-radius: 6px;
+        height: 440px;
     }
 
     #nav .active {
@@ -624,24 +652,109 @@ footer li i:hover {
 
     .repo-list ul {
         padding-inline-start: 20px;
-      }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .personal-info-item .key {
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    .personal-info-item .value {
+        min-width: 220px;
+        margin-top: -10px;
+    }
+
+    .personal-info-item .value ul {
+        margin-left: -6px;
+    }
+
+    .personal-info-item .value li {
+        width: 200px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
     .center-form {
         padding-top: 10px;
-        padding-bottom: 100px;
+        padding-bottom: 20px;
         margin: 0 auto;
         width: 66%;
         max-width: 900px;
     }
 
     .section-column {
-        min-height: 66vh;
+        min-height: 50vh;
+    }
+
+
+    div .contact-column {
+        min-height: unset;
+    }
+
+    .heading {
+        height: 23vh;
+    }
+
+    .logo {
+        background: url("../images/profile.jpg") center no-repeat;
+        background-size: cover;
+        margin: auto;
+        min-height: 33vh;
+        max-width: 420px;
+        transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+
+    .name {
+        font-family: 'Spartan', sans-serif;
+        margin-top: -240px;
+        padding-top: 20vh;
+        font-weight: 300;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        text-indent: 30px;
+    }
+
+    .title {
+        font-family: 'Raleway', sans-serif;
+        font-size: x-large;
+        font-weight: 400;
+        text-indent: 34px;
+    }
+
+    #nav {
+        margin: 0;
+        height: 10vh;
+    }
+
+    #nav li {
+        margin: 0;
+        height: 10vh;
+    }
+
+    .hvr-shutter-out-vertical:before {
+        background: rgba(0, 0, 0, 0.2);
+        height: 10vh;
+    }
+
+    li a .fa-file-arrow-down+span {
+        margin-top: 2px;
+        line-height: 1.5vh;
+    }
+
+    .section-column {
+        min-height: 55vh;
     }
 
     .row h3 {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
 
     #credentials {
@@ -655,10 +768,14 @@ footer li i:hover {
 
     .repo-list ul {
         padding-inline-start: 40px;
-      }
+    }
 
     .repo-list {
         margin-left: -15%;
         width: 130%;
-  }
+    }
+
+    footer {
+        min-height: 12vh;
+    }
 }
