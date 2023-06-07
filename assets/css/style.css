@@ -585,8 +585,12 @@ footer p {
     -o-transition: all 0.35s ease-in-out;
 }
 
+.cv-pdf a {
+    color: unset;
+}
+
 .cv-pdf i:hover {
-    color: rgb(216, 129, 48);
+    color: rgb(132, 189, 179);
 }
 
 .social-links {
@@ -603,8 +607,8 @@ footer li i {
     -o-transition: all 0.35s ease-in-out;
 }
 
-loader footer li i:hover {
-    color: rgb(216, 129, 48);
+footer li i:hover {
+    color: rgb(122, 82, 122);
 }
 
 
@@ -764,6 +768,10 @@ loader footer li i:hover {
     .gh-content p {
         margin-top: unset;
         margin-bottom: unset;
+    }
+
+    #gh-repo-data {
+        margin-top: 20px;
     }
 
     .repo-list ul {
