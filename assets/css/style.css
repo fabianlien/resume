@@ -90,7 +90,6 @@ header {
     background: url("../images/profile.jpg") center no-repeat;
     background-size: cover;
     margin: auto;
-    min-height: 360px;
     max-width: 420px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -785,5 +784,27 @@ footer li i:hover {
 
     footer {
         min-height: 12vh;
+    }
+}
+
+@media screen and (max-height: 767px) and (min-width: 768px) {
+    .logo {
+        height: 260px;
+    }
+    .heading {
+        height: 180px;
+    }
+
+    .name {
+        margin-top: -80px;
+        padding-top: 0;
+    }
+
+    #nav li {
+        height: 80px;
+    }
+
+    li a .fa-file-arrow-down+span {
+        line-height: 12px;
     }
 }
