@@ -393,6 +393,10 @@ div .contact-info .value {
     background-color: rgb(62, 88, 84);
 }
 
+.row .frontend-language {
+    color: rgb(255, 165, 80);
+}
+
 #diploma-iframe {
     width: 100%;
     height: 620px;
