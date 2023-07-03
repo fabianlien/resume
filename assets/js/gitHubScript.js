@@ -52,30 +52,37 @@ function fetchGitHubInformation(e) {
     $("#gh-user-data").html("");
     $("#gh-repo-data").html("");
 
-    let username = $("#gh-username").val();
-    if (!username) {
+
+    let userTemp = $("#gh-username").val();
+
+    setTimeout(() => {
+        let username = $("#gh-username").val()
+        if (username == userTemp) {
+            $.when(
+                $.getJSON(`https://api.github.com/users/${username}`),
+                $.getJSON(`https://api.github.com/users/${username}/repos`)
+            ).then(
+                function (firstResponse, secondResponse) {
+                    $("#gh-user-data").html(userInformationHTML(firstResponse[0]));
+                    $("#gh-repo-data").html(repoInformationHTML(secondResponse[0]));
+                },
+                function (errorResponse) {
+                    if (errorResponse.status === 404) {
+                        $("#gh-user-data").html(`${username} was not found...`)
+                    } else if (errorResponse.status === 403) {
+                        let resetTime = new Date(errorResponse.getResponseHeader("X-RateLimit-Reset") * 1000);
+                        $("#gh-user-data").html(`<h4>You have exceeded githubs maximum requests (60). Rate limiter will reset at: ${resetTime.toLocaleTimeString()}</h4>`)
+                    } else {
+                        console.log(errorResponse);
+                        $("#gh-user-data").html(`<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
+                    }
+                });
+        }
+    }, 1000);
+    
+    if (!userTemp) {
         $("#gh-user-data").html(`<h2>Please enter a existing GitHub username.</h2>`);
         return;
     }
     $("#gh-user-data").html(`<div id="loader"><img src="assets/images/loader.gif" alt="loading..."/></div>`);
-
-    $.when(
-        $.getJSON(`https://api.github.com/users/${username}`),
-        $.getJSON(`https://api.github.com/users/${username}/repos`)
-    ).then(
-        function (firstResponse, secondResponse) {
-            $("#gh-user-data").html(userInformationHTML(firstResponse[0]));
-            $("#gh-repo-data").html(repoInformationHTML(secondResponse[0]));
-        },
-        function (errorResponse) {
-            if (errorResponse.status === 404) {
-                $("#gh-user-data").html(`${username} was not found...`)
-            } else if (errorResponse.status === 403) {
-                let resetTime = new Date(errorResponse.getResponseHeader("X-RateLimit-Reset") * 1000);
-                $("#gh-user-data").html(`<h4>You have exceeded githubs maximum requests (60). Rate limiter will reset at: ${resetTime.toLocaleTimeString()}</h4>`)
-            } else {
-                console.log(errorResponse);
-                $("#gh-user-data").html(`<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
-            }
-        });
 }

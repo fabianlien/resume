@@ -482,6 +482,10 @@ div #map {
     height: 64px;
 }
 
+.row.github-color {
+    min-height: 55vh;
+}
+
 .gh-avatar img {
     border-radius: 50%;
     display: inline-block;
